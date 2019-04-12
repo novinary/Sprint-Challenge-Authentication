@@ -5,6 +5,8 @@ import Jokes from './components/Jokes';
 import Register from './components/Register';
 import "./App.css";
 
+import { Button, Form} from 'reactstrap';
+
 class App extends Component {
   logoutHandler = () => {
     localStorage.removeItem("jwt");
@@ -14,17 +16,20 @@ class App extends Component {
   render() {
     return (
       <>
+      <div className="main-form">
+      <h1><span className="font-weight-bold">Jokes App</span></h1>
         <nav>
-          <NavLink to="/login"> login </NavLink>
-					<NavLink to="/jokes">Jokes</NavLink>
-					<NavLink to="/register">Register</NavLink>
-          <button onClick={this.logoutHandler}> logout </button>
+          <NavLink className="p-2" to="/login"> Login </NavLink>
+					<NavLink className="p-2" to="/jokes">Jokes</NavLink>
+					<NavLink className="p-2" to="/register">Register</NavLink>
+          <Button onClick={this.logoutHandler}> logout </Button>
         </nav>
         <main>
           <Route path="/login" component={Login} />
           <Route path="/jokes" component={Jokes} />
 					<Route path="/register" component={Register} />
         </main>
+        </div>
       </>
     );
   }

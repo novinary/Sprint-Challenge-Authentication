@@ -16,3 +16,5 @@ Create middleware for authentication using json web tokens + work on login funct
 - the /jokes route should read the token from local storage and make a GET request to the /api/jokes route on the API attaching the token as the value of the Authorization header. - done
 - provide a button to sign out that will remove the token from local storage. - done
 - the /register route should provide a form to gather username, password and department for the user and make a POST request to the /api/register route on the API. If the user is created successfully, take the returned token, save it to the browser's local storage and redirect the user to the /users route, where they should see the list of users. - done
+
+## Style the react app - use reactstrap

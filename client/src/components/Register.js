@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 
+import { Button, FormGroup, Label, Input } from 'reactstrap';
+
 class Register extends React.Component {
 	constructor(props) {
 		super(props);
@@ -32,9 +34,9 @@ class Register extends React.Component {
 		return (
 			<div className="register">
 				<form onSubmit={this.handleSubmit}>
-					<p>username</p> <input type="text" name="username" onChange={this.handleChange} />
-					<p>password</p> <input type="text" name="password" onChange={this.handleChange} />
-					<button type="submit">Submit</button>
+				<FormGroup>  <Label> Username </Label> <Input type="text" name="username" onChange={this.handleChange} /> </FormGroup>
+				<FormGroup>  <Label> Password </Label> <Input type="text" name="password" onChange={this.handleChange} /> </FormGroup>
+				<Button className="btn-lg btn-dark btn-block" type="submit">Register</Button>
 				</form>
 			</div>
 		);
