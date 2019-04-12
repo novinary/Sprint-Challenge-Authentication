@@ -5,7 +5,7 @@ import Jokes from './components/Jokes';
 import Register from './components/Register';
 import "./App.css";
 
-import { Button, Form} from 'reactstrap';
+import { Button } from 'reactstrap';
 
 class App extends Component {
   logoutHandler = () => {
